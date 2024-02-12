@@ -1,0 +1,135 @@
+.card{
+    height: 50rem;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+    perspective: 150rem;
+
+
+    
+
+    &__side{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+
+        &--front{
+            background-color: white;
+        }
+        &--back{
+            transform: rotateY(180deg);
+            text-align: center;
+            padding: 10rem 2rem;
+            p{
+                color: $color-white;
+            }
+
+            &--1{
+                background: linear-gradient(to right bottom,$color-secondary-light,$color-secondary-dark);
+            }
+
+            &--2{
+                background: linear-gradient(to right bottom,$color-primary-light,$color-primary-dark);
+            }
+
+            &--3{
+                background: linear-gradient(to right bottom,$color-tertiary-light,$color-tertiary-dark);
+            }
+        }
+    }
+
+
+}
+
+.card-container{
+    perspective: 100rem;
+}
+
+.card-container:hover .card{
+    transform: rotateY(180deg);
+}
+
+.card{
+    position: relative;
+    &__image{
+        background-size: cover;
+        background-position: top;
+        height: 45%;
+        width: 100%;
+        clip-path: polygon(0 0,100% 0,100% 85%,0 100%);
+        background-blend-mode: screen;
+        -webkit-background-blend-mode: screen;
+        
+        &--1{
+            background-image: linear-gradient(to right bottom,$color-secondary-light,$color-secondary-dark), url(../img/nat-5.jpg);
+        }
+
+        &--2{
+            background-image: linear-gradient(to right bottom,$color-primary-light,$color-primary-dark), url(../img/nat-6.jpg);
+        }
+
+        &--3{
+            background-image: linear-gradient(to right bottom,$color-tertiary-light,$color-tertiary-dark), url(../img/nat-7.jpg);
+        }
+    }
+
+    &__heading{
+        position: absolute;
+        top : 20%;
+        color: $color-white;
+        font-size: 3rem;
+        opacity : 0.8;
+        text-align : right;
+        right: 4%;
+        font-weight: 300;
+        width: 75%;
+        
+        &__span--1{
+            background-image: linear-gradient(to right bottom,$color-secondary-light,$color-secondary-dark);
+            padding: 1rem 1rem;
+        }
+
+        &__span--2{
+            background-image: linear-gradient(to right bottom,$color-primary-light,$color-primary-dark);
+            padding: 1rem 1rem;
+        }
+
+        &__span--3{
+            background-image: linear-gradient(to right bottom,$color-tertiary-light,$color-tertiary-dark);
+            padding: 1rem 1rem;
+        }
+
+        
+    }
+
+    &__description{
+        text-align: center;
+        padding: 2rem;
+        &__elements{
+            margin: 0 auto;
+            list-style-type: none;
+            font-size : 1.6rem;
+            padding-bottom: 1rem;
+            
+            width: 80%;
+            &:not(:last-child){
+                border-bottom: 0.2px solid rgba(0, 0, 0, 0.105);
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    &__paragraph-only{
+        font-size: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    &__paragraph-price{
+        font-size: 5rem;
+        padding-bottom: 2rem;
+        font-weight: 200;
+    }
+}

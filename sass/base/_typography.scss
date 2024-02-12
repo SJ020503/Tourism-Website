@@ -1,0 +1,99 @@
+body{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    padding: 3rem;
+    color: $color-font;
+}
+
+.header{
+    &__textbox{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+    }
+    
+    &__text{
+        color: $color-white;
+    
+        &--primary{
+            display: block;
+            font-size: 6.5rem;
+            letter-spacing: 3rem;
+            font-weight: 400;
+            animation-name: moveinleft;
+            animation-duration: 1s;
+            animation-timing-function: ease-out;
+        }
+        
+        &--secondary{
+            display: block;
+            font-size: 2rem;
+            letter-spacing: 1.8rem;
+            animation-name: moveinright;
+            animation-duration: 1s;
+            animation-timing-function: ease-out;
+        }
+    }
+}
+
+.About{
+    &__heading{
+        font-size: 3.5rem;
+        margin-bottom: 8rem;
+    }
+
+    &__link:link,&__link:visited{
+        color: $color-primary;
+        font-size: 1.6rem;
+        text-decoration: none;
+        padding: .5rem 0;
+        border-bottom: 1px solid $color-primary;
+        transition: all 0.2s;
+    }
+    &__link:hover{
+        background-color: $color-primary;
+        color: white;
+    }
+
+}
+
+.heading--secondary{
+    background-image: linear-gradient(to right,$color-primary-light,$color-primary-dark);
+    display: inline-block;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: .2rem;
+}
+
+.heading--tertiary{
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.paragraph{
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.icon-font{
+    font-size: 5rem ;
+    background-image: linear-gradient(to right,$color-primary-light,$color-primary-dark);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.tours-heading{
+    font-size: 3.5rem;
+    margin-bottom: 8rem;
+}
+
+.stories__heading{
+    font-size: 3.5rem;
+    margin-bottom: 8rem;
+}
+
